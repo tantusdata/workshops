@@ -1,12 +1,13 @@
-import csv
-import sys
-
 import numpy
 
+from commons import CSVBucketingWriter
 
 N_FILES = 1
 N_ROWS_PER_FILE = 1_000
 N_TOTAL = N_FILES * N_ROWS_PER_FILE
+
+N_ROWS_PER_FILE = 1_000_000
+N_ROWS_TOTAL = 1_000
 
 
 def generate_price() -> float:
@@ -17,23 +18,18 @@ def generate_unit() -> str:
     return str(numpy.random.default_rng().choice(["kg", "m", "m2", "m3", ""], 1)[0])
 
 
-csv_writer_field_names = ["product_id", "price", "unit"]
+COLUMNS = ["product_id", "price", "unit"]
 
 if __name__ == "__main__":
-    for file_index in range(N_FILES):
-        sys.stderr.write(f"Generating file {file_index}/{N_FILES}...\n")
+    final_buckets = CSVBucketingWriter(N_ROWS_PER_FILE, "../data/products/products", COLUMNS)
 
-        with open(f"../data/products-{file_index}.csv", "w", newline="") as file_handle:
-            csv_writer = csv.DictWriter(file_handle, fieldnames=csv_writer_field_names)
-            csv_writer.writeheader()
+    for row_index in range(N_ROWS_TOTAL):
+        row = {
+            "product_id": row_index,
+            "price": generate_price(),
+            "unit": generate_unit()
+        }
 
-            for row_index in range(N_ROWS_PER_FILE):
-                product_id = file_index * N_ROWS_PER_FILE + row_index
-                price = generate_price()
-                unit = generate_unit()
+        final_buckets.write(row)
 
-                csv_writer.writerow({
-                    "product_id": product_id,
-                    "price": price,
-                    "unit": unit
-                })
+    final_buckets.flush()
