@@ -2,10 +2,6 @@ import numpy
 
 from commons import CSVBucketingWriter
 
-N_FILES = 1
-N_ROWS_PER_FILE = 1_000
-N_TOTAL = N_FILES * N_ROWS_PER_FILE
-
 N_ROWS_PER_FILE = 1_000_000
 N_ROWS_TOTAL = 1_000
 
