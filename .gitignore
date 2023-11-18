@@ -1,2 +1,5 @@
 # Remove MacOSX rubbish
 .DS_Store
+
+# Remove IDE files
+.idea/
