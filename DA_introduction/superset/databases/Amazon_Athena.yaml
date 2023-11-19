@@ -1,0 +1,14 @@
+database_name: Amazon Athena
+sqlalchemy_uri: awsathena+rest://AKIAVOFPKFA7ZNQN4IEK:XXXXXXXXXX@athena.us-west-2.amazonaws.com/mobile_application
+  ?s3_staging_dir=s3%3A%2F%2Fus-west-2-eternalsh-com-workshop-spark%2Fathena-results%2F
+cache_timeout: null
+expose_in_sqllab: true
+allow_run_async: false
+allow_ctas: false
+allow_cvas: false
+allow_dml: false
+allow_file_upload: false
+extra:
+  allows_virtual_table_explore: true
+uuid: 9de37d55-a69e-48db-8b8a-30a196b01a48
+version: 1.0.0

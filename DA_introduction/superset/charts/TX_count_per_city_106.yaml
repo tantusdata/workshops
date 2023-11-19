@@ -1,0 +1,57 @@
+slice_name: TX count per city
+description: null
+certified_by: null
+certification_details: null
+viz_type: pie
+params:
+  datasource: 24__table
+  viz_type: pie
+  groupby:
+  - u_location
+  metric: count
+  adhoc_filters:
+  - expressionType: SIMPLE
+    subject: event_date
+    operator: TEMPORAL_RANGE
+    comparator: No filter
+    clause: WHERE
+    sqlExpression: null
+    isExtra: false
+    isNew: false
+    datasourceWarning: false
+    filterOptionName: filter_ao252wd2dsd_c5l8dc6ruuv
+  - expressionType: SIMPLE
+    subject: event_type
+    operator: ==
+    operatorId: EQUALS
+    comparator: TRANSACTION
+    clause: WHERE
+    sqlExpression: null
+    isExtra: false
+    isNew: false
+    datasourceWarning: false
+    filterOptionName: filter_nol586s1i9_hcrudq7ccb8
+  row_limit: 100
+  sort_by_metric: true
+  color_scheme: supersetColors
+  show_labels_threshold: 5
+  show_legend: true
+  legendType: scroll
+  legendOrientation: top
+  label_type: key
+  number_format: SMART_NUMBER
+  date_format: smart_date
+  show_labels: true
+  labels_outside: true
+  outerRadius: 70
+  innerRadius: 30
+  extra_form_data: {}
+  dashboards:
+  - 11
+query_context: '{"datasource":{"id":24,"type":"table"},"force":false,"queries":[{"filters":[{"col":"event_date","op":"TEMPORAL_RANGE","val":"No
+  filter"},{"col":"event_type","op":"==","val":"TRANSACTION"}],"extras":{"having":"","where":""},"applied_time_extras":{},"columns":["u_location"],"metrics":["count"],"orderby":[["count",false]],"annotation_layers":[],"row_limit":100,"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{}}],"form_data":{"datasource":"24__table","viz_type":"pie","groupby":["u_location"],"metric":"count","adhoc_filters":[{"expressionType":"SIMPLE","subject":"event_date","operator":"TEMPORAL_RANGE","comparator":"No
+  filter","clause":"WHERE","sqlExpression":null,"isExtra":false,"isNew":false,"datasourceWarning":false,"filterOptionName":"filter_ao252wd2dsd_c5l8dc6ruuv"},{"expressionType":"SIMPLE","subject":"event_type","operator":"==","operatorId":"EQUALS","comparator":"TRANSACTION","clause":"WHERE","sqlExpression":null,"isExtra":false,"isNew":false,"datasourceWarning":false,"filterOptionName":"filter_nol586s1i9_hcrudq7ccb8"}],"row_limit":100,"sort_by_metric":true,"color_scheme":"supersetColors","show_labels_threshold":5,"show_legend":true,"legendType":"scroll","legendOrientation":"top","label_type":"key","number_format":"SMART_NUMBER","date_format":"smart_date","show_labels":true,"labels_outside":true,"outerRadius":70,"innerRadius":30,"extra_form_data":{},"dashboards":[11],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: b9bf1078-538b-4bb9-8e39-a6ab570b62ae
+version: 1.0.0
+dataset_uuid: 4fa12cd9-94de-4ee0-8d27-f374463ee1d0

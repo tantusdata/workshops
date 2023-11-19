@@ -1,0 +1,266 @@
+dashboard_title: Example Mobile Application Stats
+description: null
+css: ''
+slug: null
+uuid: 2402f57d-079c-442d-a181-e038a3291766
+position:
+  DASHBOARD_VERSION_KEY: v2
+  GRID_ID:
+    children:
+    - ROW-N-WEZIFFSC
+    id: GRID_ID
+    parents:
+    - ROOT_ID
+    type: GRID
+  HEADER_ID:
+    id: HEADER_ID
+    meta:
+      text: Example Mobile Application Stats
+    type: HEADER
+  ROOT_ID:
+    children:
+    - GRID_ID
+    id: ROOT_ID
+    type: ROOT
+  ROW-N-WEZIFFSC:
+    children:
+    - CHART-YVKCVTZB
+    - CHART-E767NQQB
+    - CHART-EK9NTII2
+    - CHART-UFNW3KTF
+    - CHART-GGBOTLZX
+    id: ROW-N-WEZIFFSC
+    meta:
+      '0': ROOT_ID
+      background: BACKGROUND_TRANSPARENT
+    type: ROW
+    parents:
+    - ROOT_ID
+    - GRID_ID
+  CHART-YVKCVTZB:
+    children: []
+    id: CHART-YVKCVTZB
+    meta:
+      chartId: 106
+      height: 50
+      sliceName: TX count per city
+      uuid: b9bf1078-538b-4bb9-8e39-a6ab570b62ae
+      width: 4
+    type: CHART
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-N-WEZIFFSC
+  CHART-E767NQQB:
+    children: []
+    id: CHART-E767NQQB
+    meta:
+      chartId: 103
+      height: 50
+      sliceName: New installations vs new accounts
+      uuid: d78a018d-7b21-4b1f-8126-2cfa7faf0658
+      width: 4
+    type: CHART
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-N-WEZIFFSC
+  CHART-EK9NTII2:
+    children: []
+    id: CHART-EK9NTII2
+    meta:
+      chartId: 107
+      height: 50
+      sliceName: TX Value per City
+      uuid: 9f4f9002-3fea-4ad0-a39e-c90b615b548e
+      width: 4
+    type: CHART
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-N-WEZIFFSC
+  CHART-UFNW3KTF:
+    children: []
+    id: CHART-UFNW3KTF
+    meta:
+      chartId: 105
+      height: 50
+      sliceName: User logins
+      uuid: 879b9ab7-5fb9-469e-bb89-f0a7cab684bc
+      width: 4
+    type: CHART
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-N-WEZIFFSC
+  CHART-GGBOTLZX:
+    children: []
+    id: CHART-GGBOTLZX
+    meta:
+      chartId: 104
+      height: 50
+      sliceName: Errors
+      uuid: 0065cbc1-d680-43b4-8b6d-d700f2c904de
+      width: 4
+    type: CHART
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-N-WEZIFFSC
+metadata:
+  chart_configuration:
+    '103':
+      id: 103
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 104
+        - 105
+        - 106
+        - 107
+    '104':
+      id: 104
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 103
+        - 105
+        - 106
+        - 107
+    '105':
+      id: 105
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 103
+        - 104
+        - 106
+        - 107
+    '106':
+      id: 106
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 103
+        - 104
+        - 105
+        - 107
+    '107':
+      id: 107
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 103
+        - 104
+        - 105
+        - 106
+  global_chart_configuration:
+    scope:
+      rootPath:
+      - ROOT_ID
+      excluded: []
+    chartsInScope:
+    - 103
+    - 104
+    - 105
+    - 106
+    - 107
+  color_scheme: ''
+  refresh_frequency: 0
+  shared_label_colors: {}
+  color_scheme_domain: []
+  expanded_slices: {}
+  label_colors: {}
+  timed_refresh_immune_slices: []
+  cross_filters_enabled: true
+  default_filters: '{}'
+  native_filter_configuration:
+  - id: NATIVE_FILTER-lkwf2zpwV
+    controlValues:
+      sortAscending: true
+      enableEmptyFilter: false
+      defaultToFirstItem: false
+      multiSelect: true
+      searchAllOptions: false
+      inverseSelection: false
+    name: Operating System
+    filterType: filter_select
+    targets:
+    - column:
+        name: ua_os
+      datasetUuid: 4fa12cd9-94de-4ee0-8d27-f374463ee1d0
+    defaultDataMask:
+      extraFormData: {}
+      filterState: {}
+      ownState: {}
+    cascadeParentIds: []
+    scope:
+      rootPath:
+      - ROOT_ID
+      excluded: []
+    type: NATIVE_FILTER
+    description: ''
+    chartsInScope:
+    - 103
+    - 104
+    - 105
+    - 106
+    - 107
+    tabsInScope: []
+  - id: NATIVE_FILTER-T2H0RAw2m
+    controlValues:
+      enableEmptyFilter: false
+      defaultToFirstItem: false
+      multiSelect: true
+      searchAllOptions: false
+      inverseSelection: false
+    name: Location
+    filterType: filter_select
+    targets:
+    - column:
+        name: u_location
+      datasetUuid: 4fa12cd9-94de-4ee0-8d27-f374463ee1d0
+    defaultDataMask:
+      extraFormData: {}
+      filterState: {}
+      ownState: {}
+    cascadeParentIds: []
+    scope:
+      rootPath:
+      - ROOT_ID
+      excluded: []
+    type: NATIVE_FILTER
+    description: ''
+    chartsInScope:
+    - 103
+    - 104
+    - 105
+    - 106
+    - 107
+    tabsInScope: []
+  - id: NATIVE_FILTER-zlwwnc1b7
+    controlValues:
+      enableEmptyFilter: false
+    name: Date range
+    filterType: filter_time
+    targets:
+    - {}
+    defaultDataMask:
+      extraFormData: {}
+      filterState: {}
+      ownState: {}
+    cascadeParentIds: []
+    scope:
+      rootPath:
+      - ROOT_ID
+      excluded: []
+    type: NATIVE_FILTER
+    description: ''
+    chartsInScope:
+    - 103
+    - 104
+    - 105
+    - 106
+    - 107
+    tabsInScope: []
+version: 1.0.0
